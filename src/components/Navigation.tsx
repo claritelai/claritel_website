@@ -34,7 +34,7 @@ const Navigation: React.FC = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <img
-              src={window.matchMedia("(prefers-color-scheme: dark)").matches ? darkLogo : lightLogo}
+              src={window.matchMedia("(prefers-color-scheme: dark)").matches ? lightLogo : darkLogo}
               alt="Claritel.ai"
               className="w-32"
             />
