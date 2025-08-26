@@ -97,9 +97,9 @@ const SolutionsSection: React.FC = () => {
   const tabKeys = Object.keys(solutions) as Array<keyof typeof solutions>;
 
   return (
-    <section id="solutions" className="py-24 bg-gray-50 dark:bg-gray-800 relative overflow-hidden">
+    <section id="solutions" className="py-24 bg-gray-50 relative overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 opacity-5 dark:opacity-10">
+      <div className="absolute inset-0 opacity-5">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-emerald-400 to-cyan-400 rounded-full filter blur-3xl"></div>
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full filter blur-3xl"></div>
       </div>
@@ -107,10 +107,10 @@ const SolutionsSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent mb-6">
             What We Offer
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Comprehensive suite of AI-powered communication solutions designed to transform your customer experience.
           </p>
         </div>
@@ -126,7 +126,7 @@ const SolutionsSection: React.FC = () => {
                 className={`flex items-center px-6 py-3 rounded-2xl transition-all duration-300 font-medium ${
                   activeTab === key
                     ? `bg-gradient-to-r ${solution.gradient} text-white shadow-2xl transform scale-105`
-                    : 'bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 shadow-lg hover:shadow-xl'
+                    : 'bg-white hover:bg-gray-100 shadow-lg hover:shadow-xl'
                 }`}
               >
                 <solution.icon className="w-5 h-5 mr-2" />
@@ -137,7 +137,7 @@ const SolutionsSection: React.FC = () => {
         </div>
 
         {/* Active Solution Content */}
-        <div className="bg-white dark:bg-gray-900 rounded-3xl shadow-2xl overflow-hidden">
+        <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
           <div className="grid lg:grid-cols-2 gap-0">
             {/* Content */}
             <div className="p-12">
@@ -148,23 +148,23 @@ const SolutionsSection: React.FC = () => {
                   })}
                 </div>
                 <div>
-                  <h3 className="text-3xl font-bold text-gray-800 dark:text-white mb-2">
+                  <h3 className="text-3xl font-bold text-gray-800 mb-2">
                     {solutions[activeTab as keyof typeof solutions].title}
                   </h3>
                   <div className={`w-20 h-1 bg-gradient-to-r ${solutions[activeTab as keyof typeof solutions].gradient} rounded-full`}></div>
                 </div>
               </div>
 
-              <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                 {solutions[activeTab as keyof typeof solutions].description}
               </p>
 
               <div className="space-y-4">
-                <h4 className="text-xl font-semibold text-gray-800 dark:text-white mb-4">Key Features</h4>
+                <h4 className="text-xl font-semibold text-gray-800 mb-4">Key Features</h4>
                 {solutions[activeTab as keyof typeof solutions].features.map((feature, index) => (
                   <div key={index} className="flex items-center">
                     <div className={`w-3 h-3 bg-gradient-to-r ${solutions[activeTab as keyof typeof solutions].gradient} rounded-full mr-4 flex-shrink-0`}></div>
-                    <span className="text-gray-600 dark:text-gray-300">{feature}</span>
+                    <span className="text-gray-600">{feature}</span>
                   </div>
                 ))}
               </div>
@@ -200,28 +200,28 @@ const SolutionsSection: React.FC = () => {
         {/* Bottom Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
           <div className="text-center">
-            <div className="text-3xl font-bold bg-gradient-to-r from-emerald-600 to-cyan-600 dark:from-cyan-400 dark:to-purple-400 bg-clip-text text-transparent">
+            <div className="text-3xl font-bold bg-gradient-to-r from-emerald-600 to-cyan-600 bg-clip-text text-transparent">
               99.9%
             </div>
-            <div className="text-gray-600 dark:text-gray-400 mt-1">Uptime SLA</div>
+            <div className="text-gray-600 mt-1">Uptime SLA</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold bg-gradient-to-r from-emerald-600 to-cyan-600 dark:from-cyan-400 dark:to-purple-400 bg-clip-text text-transparent">
+            <div className="text-3xl font-bold bg-gradient-to-r from-emerald-600 to-cyan-600 bg-clip-text text-transparent">
               24/7
             </div>
-            <div className="text-gray-600 dark:text-gray-400 mt-1">Support</div>
+            <div className="text-gray-600  mt-1">Support</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold bg-gradient-to-r from-emerald-600 to-cyan-600 dark:from-cyan-400 dark:to-purple-400 bg-clip-text text-transparent">
+            <div className="text-3xl font-bold bg-gradient-to-r from-emerald-600 to-cyan-600 bg-clip-text text-transparent">
               50ms
             </div>
-            <div className="text-gray-600 dark:text-gray-400 mt-1">Latency</div>
+            <div className="text-gray-600  mt-1">Latency</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold bg-gradient-to-r from-emerald-600 to-cyan-600 dark:from-cyan-400 dark:to-purple-400 bg-clip-text text-transparent">
+            <div className="text-3xl font-bold bg-gradient-to-r from-emerald-600 to-cyan-600 bg-clip-text text-transparent">
               ISO
             </div>
-            <div className="text-gray-600 dark:text-gray-400 mt-1">Certified</div>
+            <div className="text-gray-600  mt-1">Certified</div>
           </div>
         </div>
       </div>

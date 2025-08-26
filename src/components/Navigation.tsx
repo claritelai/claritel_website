@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import darkLogo from "../assests/darklogo.png";
-import lightLogo from "../assests/lightlogo.png";
 
 const Navigation: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -34,7 +33,7 @@ const Navigation: React.FC = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <img
-              src={window.matchMedia("(prefers-color-scheme: dark)").matches ? lightLogo : darkLogo}
+              src={darkLogo}
               alt="Claritel.ai"
               className="w-32"
             />
