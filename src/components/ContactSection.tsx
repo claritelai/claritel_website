@@ -36,8 +36,8 @@ const ContactSection: React.FC = () => {
     {
       icon: Phone,
       label: 'Phone',
-      value: '+91-80-4040-2600',
-      href: 'tel:+918040402600',
+      value: '+91-7276011304',
+      href: 'tel:+917276011304',
       color: 'from-blue-500 to-purple-500'
     },
     {
@@ -73,14 +73,14 @@ const ContactSection: React.FC = () => {
           {/* Contact Form */}
           <div className="bg-white dark:bg-gray-900 rounded-3xl p-8 shadow-2xl">
             <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-6">
-              Send us a message
+              Demo Request
             </h3>
 
             {isSubmitted ? (
               <div className="text-center py-12">
                 <CheckCircle className="w-16 h-16 text-emerald-500 mx-auto mb-4" />
                 <h4 className="text-xl font-semibold text-emerald-600 dark:text-emerald-400 mb-2">
-                  Message Sent Successfully!
+                  Demo Request Sent Successfully!
                 </h4>
                 <p className="text-gray-600 dark:text-gray-300">
                   Thank you for your interest. We'll get back to you within 24 hours.
