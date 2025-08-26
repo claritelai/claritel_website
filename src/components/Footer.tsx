@@ -1,5 +1,6 @@
 import React from 'react';
 import { Linkedin, Twitter, Youtube, Mail, Phone, MapPin } from 'lucide-react';
+import darkLogo from "../assests/darklogo.png";
 
 const Footer: React.FC = () => {
   const footerLinks = {
@@ -24,9 +25,12 @@ const Footer: React.FC = () => {
           {/* Brand Section */}
           <div className="lg:col-span-2">
             <div className="mb-6">
-              <h1 className="text-3xl font-bold text-blue-400">
-                Claritel.ai
-              </h1>
+              
+                <img
+              src={darkLogo}
+              alt="Claritel.ai"
+              className="text-xl"
+            />
               <p className="text-gray-600 mt-4 leading-relaxed">
                 Transforming customer experience with AI-powered, carrier-grade communication solutions 
                 that scale with your business.

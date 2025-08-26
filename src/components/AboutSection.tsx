@@ -32,7 +32,7 @@ const AboutSection: React.FC = () => {
   return (
     <section id="about" className="py-24 bg-white relative overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute inset-0 opacity-5 dark:opacity-10">
+      <div className="absolute inset-0 opacity-5">
         <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-r from-blue-300 to-blue-400 rounded-full filter blur-3xl"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-r from-blue-400 to-blue-500 rounded-full filter blur-3xl"></div>
       </div>

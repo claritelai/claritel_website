@@ -38,9 +38,9 @@ const AIInnovationSection: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 bg-white dark:bg-gray-900 relative overflow-hidden">
+    <section className="py-24 bg-white relative overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0 opacity-5 dark:opacity-10">
+      <div className="absolute inset-0 opacity-5">
         <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full filter blur-3xl"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-r from-emerald-400 to-cyan-400 rounded-full filter blur-3xl"></div>
       </div>
@@ -48,10 +48,10 @@ const AIInnovationSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent mb-6">
             AI Innovation
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Pioneering the future of customer experience with cutting-edge artificial intelligence 
             and machine learning technologies.
           </p>
@@ -62,7 +62,7 @@ const AIInnovationSection: React.FC = () => {
           {innovations.map((innovation, index) => (
             <div
               key={index}
-              className="group relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg rounded-3xl p-8 border border-gray-200/50 dark:border-gray-700/50 hover:shadow-2xl hover:shadow-emerald-500/10 dark:hover:shadow-cyan-500/20 transition-all duration-500 transform hover:-translate-y-2 overflow-hidden"
+              className="group relative bg-white/80 backdrop-blur-lg rounded-3xl p-8 border border-gray-200/50 hover:shadow-2xl hover:shadow-emerald-500/10 transition-all duration-500 transform hover:-translate-y-2 overflow-hidden"
             >
               {/* Background Gradient */}
               <div className={`absolute inset-0 bg-gradient-to-br ${innovation.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
@@ -74,7 +74,7 @@ const AIInnovationSection: React.FC = () => {
                     <innovation.icon className="w-7 h-7 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-800 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-cyan-400 transition-colors duration-300">
+                    <h3 className="text-xl font-bold text-gray-800 group-hover:text-emerald-600 transition-colors duration-300">
                       {innovation.title}
                     </h3>
                   </div>
@@ -85,7 +85,7 @@ const AIInnovationSection: React.FC = () => {
               </div>
 
               {/* Description */}
-              <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6 relative z-10">
+              <p className="text-gray-600 leading-relaxed mb-6 relative z-10">
                 {innovation.description}
               </p>
 
@@ -94,7 +94,7 @@ const AIInnovationSection: React.FC = () => {
                 {innovation.features.map((feature, featureIndex) => (
                   <div key={featureIndex} className="flex items-center">
                     <div className={`w-2 h-2 bg-gradient-to-r ${innovation.color} rounded-full mr-3 flex-shrink-0`}></div>
-                    <span className="text-gray-600 dark:text-gray-300 text-sm">{feature}</span>
+                    <span className="text-gray-600 text-sm">{feature}</span>
                   </div>
                 ))}
               </div>
@@ -112,17 +112,17 @@ const AIInnovationSection: React.FC = () => {
         </div>
 
         {/* Technology Showcase */}
-        <div className="mt-20 bg-gradient-to-r from-emerald-50 to-cyan-50 dark:from-gray-800 dark:to-purple-900 rounded-3xl p-12 text-center">
-          <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-6">
+        <div className="mt-20 bg-gradient-to-r from-emerald-50 to-cyan-50 rounded-3xl p-12 text-center">
+          <h3 className="text-2xl font-bold text-gray-800 mb-6">
             Powered by Advanced AI Technologies
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {['Neural Networks', 'Deep Learning', 'NLP/NLU', 'Machine Learning'].map((tech, index) => (
               <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-cyan-500 dark:from-cyan-500 to-purple-500 rounded-xl mx-auto mb-3 flex items-center justify-center shadow-lg">
+                <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-xl mx-auto mb-3 flex items-center justify-center shadow-lg">
                   <span className="text-2xl">🧠</span>
                 </div>
-                <div className="font-semibold text-gray-800 dark:text-white">{tech}</div>
+                <div className="font-semibold text-gray-800">{tech}</div>
               </div>
             ))}
           </div>

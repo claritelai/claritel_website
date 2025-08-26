@@ -16,7 +16,7 @@ const RoadmapSection: React.FC = () => {
       ],
       status: 'In Development',
       color: 'from-emerald-500 to-cyan-500',
-      bgColor: 'from-emerald-50 to-cyan-50 dark:from-emerald-900/20 dark:to-cyan-900/20'
+      bgColor: 'from-emerald-50 to-cyan-50'
     },
     {
       year: '2026',
@@ -31,14 +31,14 @@ const RoadmapSection: React.FC = () => {
       ],
       status: 'Planned',
       color: 'from-purple-500 to-pink-500',
-      bgColor: 'from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20'
+      bgColor: 'from-purple-50 to-pink-50'
     }
   ];
 
   return (
-    <section className="py-24 bg-white dark:bg-gray-900 relative overflow-hidden">
+    <section className="py-24 bg-white relative overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 opacity-5 dark:opacity-10">
+      <div className="absolute inset-0 opacity-5">
         <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-r from-emerald-400 to-cyan-400 rounded-full filter blur-3xl"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full filter blur-3xl"></div>
       </div>
@@ -46,10 +46,10 @@ const RoadmapSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent mb-6">
             Innovation Roadmap
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Our journey towards the future of AI-powered customer experience and contact center automation.
           </p>
         </div>
@@ -64,7 +64,7 @@ const RoadmapSection: React.FC = () => {
             {roadmapItems.map((item, index) => (
               <div key={index} className={`flex items-center ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
                 <div className={`w-full max-w-lg ${index % 2 === 0 ? 'pr-8' : 'pl-8'}`}>
-                  <div className={`bg-gradient-to-br ${item.bgColor} rounded-3xl p-8 shadow-2xl border border-gray-200/50 dark:border-gray-700/50 hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-2`}>
+                  <div className={`bg-gradient-to-br ${item.bgColor} rounded-3xl p-8 shadow-2xl border border-gray-200/50 hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-2`}>
                     {/* Header */}
                     <div className="flex items-center justify-between mb-6">
                       <div className="flex items-center">
@@ -72,8 +72,8 @@ const RoadmapSection: React.FC = () => {
                           <item.icon className="w-8 h-8 text-white" />
                         </div>
                         <div>
-                          <div className="text-2xl font-bold text-gray-800 dark:text-white">{item.year}</div>
-                          <div className="text-sm text-gray-500 dark:text-gray-400">{item.quarter}</div>
+                          <div className="text-2xl font-bold text-gray-800">{item.year}</div>
+                          <div className="text-sm text-gray-500">{item.quarter}</div>
                         </div>
                       </div>
                       <div className={`px-3 py-1 bg-gradient-to-r ${item.color} text-white rounded-full text-sm font-medium`}>
@@ -82,7 +82,7 @@ const RoadmapSection: React.FC = () => {
                     </div>
 
                     {/* Title */}
-                    <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-4">
+                    <h3 className="text-xl font-bold text-gray-800 mb-4">
                       {item.title}
                     </h3>
 
@@ -91,7 +91,7 @@ const RoadmapSection: React.FC = () => {
                       {item.features.map((feature, featureIndex) => (
                         <div key={featureIndex} className="flex items-start">
                           <div className={`w-2 h-2 bg-gradient-to-r ${item.color} rounded-full mt-2 mr-3 flex-shrink-0`}></div>
-                          <span className="text-gray-600 dark:text-gray-300">{feature}</span>
+                          <span className="text-gray-600">{feature}</span>
                         </div>
                       ))}
                     </div>

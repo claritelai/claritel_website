@@ -99,7 +99,7 @@ const EnhancedHeroSection: React.FC = () => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white dark:bg-gray-900">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
       {/* Neural Network Canvas */}
       <canvas ref={canvasRef} className="absolute inset-0 opacity-20" />
 
@@ -126,12 +126,12 @@ const EnhancedHeroSection: React.FC = () => {
           {/* Headline */}
           <h1 className="text-4xl sm:text-6xl lg:text-8xl font-bold leading-tight">
             <span className="block text-blue-600">Deep Tech.</span>
-            <span className="block text-gray-800 dark:text-white mt-2">Modular Architecture.</span>
+            <span className="block text-gray-800 mt-2">Modular Architecture.</span>
             <span className="block text-blue-600 mt-2">Carrier-Grade AI Voice.</span>
           </h1>
 
           {/* Subheadline */}
-          <p className="text-xl sm:text-2xl text-gray-700 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl sm:text-2xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
             Claritel.ai empowers enterprises with AI-driven, scalable, and adaptive CX solutions
             that transform the contact center ecosystem.
           </p>
@@ -145,7 +145,7 @@ const EnhancedHeroSection: React.FC = () => {
               </span>
             </button>
 
-            <button className="group px-10 py-5 bg-white dark:bg-gray-800 text-blue-800 dark:text-white rounded-3xl font-semibold text-lg border border-blue-200 dark:border-gray-700 transition-transform hover:scale-105">
+            <button className="group px-10 py-5 bg-white text-blue-800 rounded-3xl font-semibold text-lg border border-blue-200 transition-transform hover:scale-105">
               <span className="flex items-center">
                 <Play className="mr-2 w-5 h-5 group-hover:scale-110 transition-transform" />
                 Watch Demo
@@ -154,16 +154,16 @@ const EnhancedHeroSection: React.FC = () => {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 pt-16 border-t border-gray-200 dark:border-gray-700">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 pt-16 border-t border-gray-200">
             {[
               { value: '500M+', label: 'API Calls/Month' },
               { value: '99.9%', label: 'Uptime SLA' },
               { value: '50+', label: 'Enterprise Clients' },
               { value: '24/7', label: 'Support' }
             ].map((stat, index) => (
-              <div key={index} className="text-center p-6 rounded-2xl bg-gray-50 dark:bg-gray-800">
+              <div key={index} className="text-center p-6 rounded-2xl bg-gray-50">
                 <div className="text-3xl md:text-4xl font-bold text-blue-600">{stat.value}</div>
-                <div className="text-gray-600 dark:text-gray-400 mt-2 font-medium">{stat.label}</div>
+                <div className="text-gray-600 mt-2 font-medium">{stat.label}</div>
               </div>
             ))}
           </div>
