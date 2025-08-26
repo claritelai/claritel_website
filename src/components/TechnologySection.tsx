@@ -98,33 +98,30 @@ const TechnologySection: React.FC = () => {
               3D System Architecture
             </h3>
 
-            {/* 3D Architecture Diagram */}
-            <div className="relative h-[23rem] bg-gradient-to-br from-emerald-50 to-cyan-50 rounded-2xl overflow-hidden">
-              {/* Layer 1 - Frontend */}
-              <div className="absolute top-4 left-1/2 transform -translate-x-1/2 w-64 h-16 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-lg shadow-xl flex items-center justify-center text-white font-semibold opacity-90">
+            {/* Fixed 3D Architecture Diagram */}
+            <div className="relative flex flex-col items-center space-y-8 bg-gradient-to-br from-emerald-50 to-cyan-50 rounded-2xl p-12">
+              {/* Layer 1 */}
+              <div className="w-64 h-16 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-lg shadow-xl flex items-center justify-center text-white font-semibold opacity-90 transform translate-y-1">
                 User Interface Layer
               </div>
 
-              {/* Layer 2 - API */}
-              <div className="absolute top-24 left-1/2 transform -translate-x-1/2 w-72 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg shadow-xl flex items-center justify-center text-white font-semibold opacity-80 transform rotate-1">
+              {/* Layer 2 */}
+              <div className="w-72 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg shadow-xl flex items-center justify-center text-white font-semibold opacity-80 transform rotate-1 translate-y-1">
                 API Gateway & Load Balancers
               </div>
 
-              {/* Layer 3 - Services */}
-              <div className="absolute top-44 left-1/2 transform -translate-x-1/2 w-80 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg shadow-xl flex items-center justify-center text-white font-semibold opacity-70 transform -rotate-1">
+              {/* Layer 3 */}
+              <div className="w-80 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg shadow-xl flex items-center justify-center text-white font-semibold opacity-70 transform -rotate-1">
                 Microservices & AI Engine
               </div>
 
-              {/* Layer 4 - Data */}
-              <div className="absolute top-72 left-1/2 transform -translate-x-1/2 w-[20rem] h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg shadow-xl flex items-center justify-center text-white font-semibold opacity-90">
+              {/* Layer 4 */}
+              <div className="w-88 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg shadow-xl flex items-center justify-center text-white font-semibold opacity-60 transform -translate-y-1">
                 Database & Storage Layer
               </div>
 
               {/* Connecting Lines */}
-              <svg
-                className="absolute inset-0 w-full h-full"
-                style={{ pointerEvents: "none" }}
-              >
+              <svg className="absolute inset-0 w-full h-full pointer-events-none">
                 <defs>
                   <linearGradient
                     id="lineGradient"

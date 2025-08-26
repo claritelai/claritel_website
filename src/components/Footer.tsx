@@ -7,14 +7,14 @@ const Footer: React.FC = () => {
     Company: ['About Us', 'Careers', 'News & Events', 'Leadership', 'Investors'],
     Solutions: ['Cloud Telephony', 'CCaaS', 'Unified Communications', 'AI Bots', 'Analytics'],
     Industries: ['Banking', 'Healthcare', 'E-commerce', 'Education', 'Real Estate'],
-    Resources: ['Documentation', 'API Reference', 'Case Studies', 'Whitepapers', 'Blog'],
-    Support: ['Help Center', 'Contact Support', 'System Status', 'Security', 'Privacy']
+    // Resources: ['Documentation', 'API Reference', 'Case Studies', 'Whitepapers', 'Blog'],
+    // Support: ['Help Center', 'Contact Support', 'System Status', 'Security', 'Privacy']
   };
 
   const socialLinks = [
-    { icon: Linkedin, href: '#', label: 'LinkedIn', color: 'hover:text-blue-500' },
-    { icon: Twitter, href: '#', label: 'Twitter', color: 'hover:text-sky-500' },
-    { icon: Youtube, href: '#', label: 'YouTube', color: 'hover:text-red-500' }
+    { icon: Linkedin, href: 'https://www.linkedin.com/company/claritel-ai/', label: 'LinkedIn', color: 'hover:text-blue-500' },
+    // { icon: Twitter, href: '#', label: 'Twitter', color: 'hover:text-sky-500' },
+    // { icon: Youtube, href: '#', label: 'YouTube', color: 'hover:text-red-500' }
   ];
 
   return (
@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid lg:grid-cols-6 gap-12">
           {/* Brand Section */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-3">
             <div className="mb-6">
               
                 <img
@@ -103,7 +103,7 @@ const Footer: React.FC = () => {
               <p>&copy; 2025 Claritel.ai. All rights reserved.</p>
             </div>
             
-            <div className="flex flex-wrap gap-6 text-sm">
+            {/* <div className="flex flex-wrap gap-6 text-sm">
               <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">
                 Privacy Policy
               </a>
@@ -116,7 +116,7 @@ const Footer: React.FC = () => {
               <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">
                 GDPR
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
