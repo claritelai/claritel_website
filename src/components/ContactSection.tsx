@@ -1,0 +1,230 @@
+import React, { useState } from 'react';
+import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
+
+const ContactSection: React.FC = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    subject: '',
+    message: ''
+  });
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle form submission logic here
+    setIsSubmitted(true);
+    setTimeout(() => setIsSubmitted(false), 3000);
+  };
+
+  const contactInfo = [
+    {
+      icon: Mail,
+      label: 'Email',
+      value: 'marcom@claritel.ai',
+      href: 'mailto:marcom@claritel.ai',
+      color: 'from-emerald-500 to-cyan-500'
+    },
+    {
+      icon: Phone,
+      label: 'Phone',
+      value: '+91-80-4040-2600',
+      href: 'tel:+918040402600',
+      color: 'from-blue-500 to-purple-500'
+    },
+    {
+      icon: MapPin,
+      label: 'Headquarters',
+      value: 'Electronic City, Bangalore 560100',
+      href: '#',
+      color: 'from-purple-500 to-pink-500'
+    }
+  ];
+
+  return (
+    <section id="contact" className="py-24 bg-gray-50 dark:bg-gray-800 relative overflow-hidden">
+      {/* Background */}
+      <div className="absolute inset-0 opacity-5 dark:opacity-10">
+        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-gradient-to-r from-emerald-400 to-cyan-400 rounded-full filter blur-3xl"></div>
+        <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full filter blur-3xl"></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent mb-6">
+            Contact Us
+          </h2>
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            Ready to transform your customer experience? Get in touch with our experts 
+            to discuss your specific requirements.
+          </p>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-12">
+          {/* Contact Form */}
+          <div className="bg-white dark:bg-gray-900 rounded-3xl p-8 shadow-2xl">
+            <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-6">
+              Send us a message
+            </h3>
+
+            {isSubmitted ? (
+              <div className="text-center py-12">
+                <CheckCircle className="w-16 h-16 text-emerald-500 mx-auto mb-4" />
+                <h4 className="text-xl font-semibold text-emerald-600 dark:text-emerald-400 mb-2">
+                  Message Sent Successfully!
+                </h4>
+                <p className="text-gray-600 dark:text-gray-300">
+                  Thank you for your interest. We'll get back to you within 24 hours.
+                </p>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                      Name *
+                    </label>
+                    <input
+                      type="text"
+                      name="name"
+                      required
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-transparent dark:bg-gray-800 dark:text-white transition-all duration-200"
+                      placeholder="Your name"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                      Email *
+                    </label>
+                    <input
+                      type="email"
+                      name="email"
+                      required
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-transparent dark:bg-gray-800 dark:text-white transition-all duration-200"
+                      placeholder="your@email.com"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                    Company
+                  </label>
+                  <input
+                    type="text"
+                    name="company"
+                    value={formData.company}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-transparent dark:bg-gray-800 dark:text-white transition-all duration-200"
+                    placeholder="Your company name"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                    Subject *
+                  </label>
+                  <select
+                    name="subject"
+                    required
+                    value={formData.subject}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-transparent dark:bg-gray-800 dark:text-white transition-all duration-200"
+                  >
+                    <option value="">Select a subject</option>
+                    <option value="sales">Sales Inquiry</option>
+                    <option value="support">Technical Support</option>
+                    <option value="partnership">Partnership</option>
+                    <option value="demo">Request Demo</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                    Message *
+                  </label>
+                  <textarea
+                    name="message"
+                    required
+                    rows={5}
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-emerald-500 focus:border-transparent dark:bg-gray-800 dark:text-white transition-all duration-200 resize-none"
+                    placeholder="Tell us about your requirements..."
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full bg-gradient-to-r from-emerald-500 to-cyan-500 dark:from-cyan-500 dark:to-purple-500 text-white py-4 rounded-xl font-semibold hover:shadow-2xl hover:shadow-emerald-500/25 dark:hover:shadow-cyan-500/25 transition-all duration-300 transform hover:scale-[1.02] flex items-center justify-center"
+                >
+                  <Send className="w-5 h-5 mr-2" />
+                  Send Message
+                </button>
+              </form>
+            )}
+          </div>
+
+          {/* Contact Information */}
+          <div className="space-y-8">
+            {contactInfo.map((info, index) => (
+              <a
+                key={index}
+                href={info.href}
+                className="group block bg-white dark:bg-gray-900 rounded-3xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-2"
+              >
+                <div className="flex items-start">
+                  <div className={`w-16 h-16 bg-gradient-to-r ${info.color} rounded-2xl flex items-center justify-center mr-6 shadow-xl group-hover:scale-110 group-hover:rotate-3 transition-all duration-300`}>
+                    <info.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-800 dark:text-white mb-2 group-hover:text-emerald-600 dark:group-hover:text-cyan-400 transition-colors duration-300">
+                      {info.label}
+                    </h4>
+                    <p className="text-gray-600 dark:text-gray-300 text-lg">
+                      {info.value}
+                    </p>
+                  </div>
+                </div>
+              </a>
+            ))}
+
+            {/* Google Map Placeholder */}
+            <div className="bg-white dark:bg-gray-900 rounded-3xl p-8 shadow-2xl">
+              <h4 className="text-lg font-semibold text-gray-800 dark:text-white mb-4">
+                Our Headquarters
+              </h4>
+              <div className="w-full h-64 bg-gradient-to-br from-emerald-100 to-cyan-100 dark:from-emerald-900/30 dark:to-cyan-900/30 rounded-xl flex items-center justify-center border border-gray-200 dark:border-gray-700">
+                <div className="text-center">
+                  <MapPin className="w-12 h-12 text-emerald-500 mx-auto mb-2" />
+                  <p className="text-gray-600 dark:text-gray-300 font-medium">
+                    Interactive Map
+                  </p>
+                  <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                    Electronic City, Bangalore
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ContactSection;
