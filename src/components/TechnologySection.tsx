@@ -116,7 +116,7 @@ const TechnologySection: React.FC = () => {
               </div>
 
               {/* Layer 4 */}
-              <div className="w-88 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg shadow-xl flex items-center justify-center text-white font-semibold opacity-60 transform -translate-y-1">
+              <div className="w-[20rem] h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg shadow-xl flex items-center justify-center text-white font-semibold opacity-60 transform -translate-y-1">
                 Database & Storage Layer
               </div>
 
