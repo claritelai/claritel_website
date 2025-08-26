@@ -173,7 +173,7 @@ const ContactSection: React.FC = () => {
                   className="w-full bg-gradient-to-r from-emerald-500 to-cyan-500 dark:from-cyan-500 dark:to-purple-500 text-white py-4 rounded-xl font-semibold hover:shadow-2xl hover:shadow-emerald-500/25 dark:hover:shadow-cyan-500/25 transition-all duration-300 transform hover:scale-[1.02] flex items-center justify-center"
                 >
                   <Send className="w-5 h-5 mr-2" />
-                  Send Message
+                  Demo Request
                 </button>
               </form>
             )}
