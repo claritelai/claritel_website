@@ -66,34 +66,32 @@ const TechnologySection: React.FC = () => {
             <h3 className="text-2xl font-bold text-center text-gray-800 dark:text-white mb-8">
               3D System Architecture
             </h3>
-            
- {/* 3D Architecture Diagram (Fixed Layout) */}
-<div className="relative flex flex-col items-center space-y-8 bg-gradient-to-br from-emerald-50 to-cyan-50 dark:from-gray-800 dark:to-purple-900 rounded-2xl p-12">
-  
-  {/* Layer 1 - User Interface */}
-  <div className="w-64 h-16 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-lg shadow-xl flex items-center justify-center text-white font-semibold opacity-90 transform translate-y-1">
-    User Interface Layer
-  </div>
 
-  {/* Layer 2 - API */}
-  <div className="w-72 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg shadow-xl flex items-center justify-center text-white font-semibold opacity-80 transform rotate-1 translate-y-1">
-    API Gateway & Load Balancers
-  </div>
+            {/* Fixed 3D Architecture Diagram */}
+            <div className="relative flex flex-col items-center space-y-8 bg-gradient-to-br from-emerald-50 to-cyan-50 dark:from-gray-800 dark:to-purple-900 rounded-2xl p-12">
+              
+              {/* Layer 1 */}
+              <div className="w-64 h-16 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-lg shadow-xl flex items-center justify-center text-white font-semibold opacity-90 transform translate-y-1">
+                User Interface Layer
+              </div>
 
-  {/* Layer 3 - Services */}
-  <div className="w-80 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg shadow-xl flex items-center justify-center text-white font-semibold opacity-70 transform -rotate-1">
-    Microservices & AI Engine
-  </div>
+              {/* Layer 2 */}
+              <div className="w-72 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg shadow-xl flex items-center justify-center text-white font-semibold opacity-80 transform rotate-1 translate-y-1">
+                API Gateway & Load Balancers
+              </div>
 
-  {/* Layer 4 - Data */}
-  <div className="w-88 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg shadow-xl flex items-center justify-center text-white font-semibold opacity-60 transform -translate-y-1">
-    Database & Storage Layer
-  </div>
-</div>
+              {/* Layer 3 */}
+              <div className="w-80 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg shadow-xl flex items-center justify-center text-white font-semibold opacity-70 transform -rotate-1">
+                Microservices & AI Engine
+              </div>
 
+              {/* Layer 4 */}
+              <div className="w-88 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg shadow-xl flex items-center justify-center text-white font-semibold opacity-60 transform -translate-y-1">
+                Database & Storage Layer
+              </div>
 
               {/* Connecting Lines */}
-              <svg className="absolute inset-0 w-full h-full" style={{ pointerEvents: 'none' }}>
+              <svg className="absolute inset-0 w-full h-full pointer-events-none">
                 <defs>
                   <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                     <stop offset="0%" style={{ stopColor: '#10b981', stopOpacity: 0.6 }} />
