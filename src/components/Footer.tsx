@@ -90,7 +90,7 @@ const Footer: React.FC = () => {
                   marcom@claritel.ai
                 </a>
               </div>
-              <div className="flex items-center text-gray-600">
+              {/* <div className="flex items-center text-gray-600">
                 <Phone className="w-5 h-5 mr-3 text-blue-500" />
                 <a
                   href="tel:+917276011304"
@@ -98,7 +98,7 @@ const Footer: React.FC = () => {
                 >
                   +91-7276011304
                 </a>
-              </div>
+              </div> */}
               <div className="flex items-start text-gray-600">
                 <MapPin className="w-5 h-5 mr-3 mt-1 text-blue-500" />
                 <span>

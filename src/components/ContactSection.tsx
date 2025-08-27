@@ -37,13 +37,13 @@ const ContactSection: React.FC = () => {
       href: "mailto:marcom@claritel.ai",
       color: "from-emerald-500 to-cyan-500",
     },
-    {
-      icon: Phone,
-      label: "Phone",
-      value: "+91-7276011304",
-      href: "tel:+917276011304",
-      color: "from-blue-500 to-purple-500",
-    },
+    // {
+    //   icon: Phone,
+    //   label: "Phone",
+    //   value: "+91-7276011304",
+    //   href: "tel:+917276011304",
+    //   color: "from-blue-500 to-purple-500",
+    // },
     {
       icon: MapPin,
       label: "Headquarters",
