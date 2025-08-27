@@ -99,25 +99,33 @@ const TechnologySection: React.FC = () => {
             </h3>
 
             {/* Straight Architecture Diagram */}
-            <div className="relative flex flex-col items-center space-y-6 bg-gradient-to-br from-emerald-50 to-cyan-50 rounded-2xl p-12">
+            <div className="relative flex flex-col items-center space-y-4 md:space-y-6 bg-gradient-to-br from-emerald-50 to-cyan-50 rounded-2xl p-4 md:p-12">
               {/* Layer 1 */}
-              <div className="w-[40%] max-w-2xl h-16 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-lg shadow-xl flex items-center justify-center text-white font-semibold hover:scale-[1.02] transition-transform">
-                User Interface Layer
+              <div className="w-[90%] md:w-[40%] max-w-2xl h-16 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-lg shadow-xl flex items-center justify-center text-white font-semibold hover:scale-[1.02] transition-transform">
+                <span className="text-sm md:text-base px-2 text-center">
+                  User Interface Layer
+                </span>
               </div>
 
               {/* Layer 2 */}
-              <div className="w-[40%] max-w-2xl h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg shadow-xl flex items-center justify-center text-white font-semibold hover:scale-[1.02] transition-transform">
-                API Gateway & Load Balancers
+              <div className="w-[90%] md:w-[40%] max-w-2xl h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg shadow-xl flex items-center justify-center text-white font-semibold hover:scale-[1.02] transition-transform">
+                <span className="text-sm md:text-base px-2 text-center">
+                  API Gateway & Load Balancers
+                </span>
               </div>
 
               {/* Layer 3 */}
-              <div className="w-[40%] max-w-2xl h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg shadow-xl flex items-center justify-center text-white font-semibold hover:scale-[1.02] transition-transform">
-                Microservices & AI Engine
+              <div className="w-[90%] md:w-[40%] max-w-2xl h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg shadow-xl flex items-center justify-center text-white font-semibold hover:scale-[1.02] transition-transform">
+                <span className="text-sm md:text-base px-2 text-center">
+                  Microservices & AI Engine
+                </span>
               </div>
 
               {/* Layer 4 */}
-              <div className="w-[40%] max-w-2xl h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg shadow-xl flex items-center justify-center text-white font-semibold hover:scale-[1.02] transition-transform">
-                Database & Storage Layer
+              <div className="w-[90%] md:w-[40%] max-w-2xl h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg shadow-xl flex items-center justify-center text-white font-semibold hover:scale-[1.02] transition-transform">
+                <span className="text-sm md:text-base px-2 text-center">
+                  Database & Storage Layer
+                </span>
               </div>
 
               {/* Connecting Lines */}

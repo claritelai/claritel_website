@@ -109,8 +109,8 @@ const EnhancedHeroSection: React.FC = () => {
       {/* Particles Background */}
       <div ref={particlesRef} className="absolute inset-0 opacity-40"></div>
 
-      {/* Floating Solid Elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      {/* Floating Solid Elements - Hidden on mobile */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none hidden md:block">
         <div className="absolute top-20 left-10 w-24 h-24 bg-blue-400 rounded-3xl opacity-20 animate-float"></div>
         <div className="absolute bottom-20 right-10 w-20 h-20 bg-blue-300 rounded-full opacity-20 animate-float-delayed"></div>
         <div className="absolute top-1/3 right-20 w-16 h-16 bg-blue-200 rounded-2xl opacity-30 animate-float-slow"></div>

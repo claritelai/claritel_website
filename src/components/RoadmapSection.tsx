@@ -112,8 +112,8 @@ const RoadmapSection: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Timeline Node */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center">
+                {/* Timeline Node - Hidden on mobile, visible on md and up */}
+                <div className="absolute left-1/2 transform -translate-x-1/2 hidden md:flex items-center justify-center">
                   <div className={`w-8 h-8 bg-gradient-to-r ${item.color} rounded-full border-4 border-white dark:border-gray-900 shadow-xl z-10`}>
                     <div className="w-full h-full rounded-full opacity-50 animate-ping"></div>
                   </div>
