@@ -4,8 +4,8 @@ import { Calendar, TrendingUp, Zap, Brain } from 'lucide-react';
 const RoadmapSection: React.FC = () => {
   const roadmapItems = [
     {
-      year: '2025',
-      quarter: 'Q1-Q4',
+      year: '2026',
+      quarter: 'Q1',
       icon: TrendingUp,
       title: 'Advanced Analytics Suite',
       features: [
@@ -20,7 +20,7 @@ const RoadmapSection: React.FC = () => {
     },
     {
       year: '2026',
-      quarter: 'Q1-Q4',
+      quarter: 'Q2',
       icon: Brain,
       title: 'Full Agentic AI Platform',
       features: [
@@ -100,12 +100,12 @@ const RoadmapSection: React.FC = () => {
                     <div className="mt-6">
                       <div className="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400 mb-2">
                         <span>Progress</span>
-                        <span>{item.year === '2025' ? '75%' : '15%'}</span>
+                        <span>{item.quarter === 'Q1' ? '75%' : '15%'}</span>
                       </div>
                       <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
                         <div 
                           className={`h-2 bg-gradient-to-r ${item.color} rounded-full transition-all duration-1000`}
-                          style={{ width: item.year === '2025' ? '75%' : '15%' }}
+                          style={{ width: item.quarter === 'Q1' ? '75%' : '15%' }}
                         ></div>
                       </div>
                     </div>

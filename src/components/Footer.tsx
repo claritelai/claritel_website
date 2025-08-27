@@ -1,20 +1,63 @@
-import React from 'react';
-import { Linkedin, Twitter, Youtube, Mail, Phone, MapPin } from 'lucide-react';
+import React from "react";
+import {
+  Linkedin,
+  Twitter,
+  Youtube,
+  Mail,
+  Phone,
+  MapPin,
+  Instagram,
+  Facebook,
+} from "lucide-react";
 import darkLogo from "../assests/darklogo.png";
 
 const Footer: React.FC = () => {
   const footerLinks = {
-    Company: ['About Us', 'Careers', 'News & Events', 'Leadership', 'Investors'],
-    Solutions: ['Cloud Telephony', 'CCaaS', 'Unified Communications', 'AI Bots', 'Analytics'],
-    Industries: ['Banking', 'Healthcare', 'E-commerce', 'Education', 'Real Estate'],
+    Company: ["About Us", "Careers"],
+    Solutions: [
+      "Cloud Telephony",
+      "CCaaS",
+      "Unified Communications",
+      "AI Bots",
+      "Analytics",
+    ],
+    Industries: [
+      "Banking",
+      "Healthcare",
+      "E-commerce",
+      "Education",
+      "Real Estate",
+    ],
     // Resources: ['Documentation', 'API Reference', 'Case Studies', 'Whitepapers', 'Blog'],
     // Support: ['Help Center', 'Contact Support', 'System Status', 'Security', 'Privacy']
   };
 
   const socialLinks = [
-    { icon: Linkedin, href: 'https://www.linkedin.com/company/claritel-ai/', label: 'LinkedIn', color: 'hover:text-blue-500' },
-    // { icon: Twitter, href: '#', label: 'Twitter', color: 'hover:text-sky-500' },
+    {
+      icon: Linkedin,
+      href: "https://www.linkedin.com/company/claritel-ai/",
+      label: "LinkedIn",
+      color: "hover:text-blue-500",
+    },
+    {
+      icon: Twitter,
+      href: "https://x.com/ClaritelAi?t=rNGPFaBYzDpYIRIGV124iQ&s=09",
+      label: "Twitter",
+      color: "hover:text-sky-500",
+    },
     // { icon: Youtube, href: '#', label: 'YouTube', color: 'hover:text-red-500' }
+    {
+      icon: Facebook,
+      href: "https://www.facebook.com/share/19hXrqifjS/",
+      label: "Facebook",
+      color: "hover:text-sky-500",
+    },
+    {
+      icon: Instagram,
+      href: "https://www.instagram.com/claritel.ai?igsh=ZjdpdTc1cjA4M3pi",
+      label: "Instagram",
+      color: "hover:text-pink-500",
+    },
   ];
 
   return (
@@ -25,15 +68,10 @@ const Footer: React.FC = () => {
           {/* Brand Section */}
           <div className="lg:col-span-3">
             <div className="mb-6">
-              
-                <img
-              src={darkLogo}
-              alt="Claritel.ai"
-              className="text-xl"
-            />
+              <img src={darkLogo} alt="Claritel.ai" className="text-xl" />
               <p className="text-gray-600 mt-4 leading-relaxed">
-                Transforming customer experience with AI-powered, carrier-grade communication solutions 
-                that scale with your business.
+                Transforming customer experience with AI-powered, carrier-grade
+                communication solutions that scale with your business.
               </p>
             </div>
 
@@ -41,19 +79,28 @@ const Footer: React.FC = () => {
             <div className="space-y-3 mb-6">
               <div className="flex items-center text-gray-600">
                 <Mail className="w-5 h-5 mr-3 text-blue-500" />
-                <a href="mailto:marcom@claritel.ai" className="hover:text-blue-600 transition-colors">
+                <a
+                  href="mailto:marcom@claritel.ai"
+                  className="hover:text-blue-600 transition-colors"
+                >
                   marcom@claritel.ai
                 </a>
               </div>
               <div className="flex items-center text-gray-600">
                 <Phone className="w-5 h-5 mr-3 text-blue-500" />
-                <a href="tel:+917276011304" className="hover:text-blue-600 transition-colors">
+                <a
+                  href="tel:+917276011304"
+                  className="hover:text-blue-600 transition-colors"
+                >
                   +91-7276011304
                 </a>
               </div>
               <div className="flex items-start text-gray-600">
                 <MapPin className="w-5 h-5 mr-3 mt-1 text-blue-500" />
-                <span>Electronic City, Bangalore 560100, India</span>
+                <span>
+                  101, Oxford Towers, 139, HAL Old Airport Rd, Kodihalli,
+                  Bengaluru, Karnataka 560008
+                </span>
               </div>
             </div>
 
@@ -82,7 +129,7 @@ const Footer: React.FC = () => {
                 {links.map((link, linkIndex) => (
                   <li key={linkIndex}>
                     <a
-                      href="#"
+                      href={link === "Careers" ? "#contact" : "#"}
                       className="text-gray-600 hover:text-blue-600 transition-colors duration-300"
                     >
                       {link}
@@ -102,7 +149,7 @@ const Footer: React.FC = () => {
             <div className="text-gray-600 mb-4 md:mb-0">
               <p>&copy; 2025 Claritel.ai. All rights reserved.</p>
             </div>
-            
+
             {/* <div className="flex flex-wrap gap-6 text-sm">
               <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">
                 Privacy Policy
@@ -123,11 +170,21 @@ const Footer: React.FC = () => {
 
       {/* Back to Top Button */}
       <button
-        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-full shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-110 flex items-center justify-center z-50"
       >
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        <svg
+          className="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M5 10l7-7m0 0l7 7m-7-7v18"
+          />
         </svg>
       </button>
     </footer>

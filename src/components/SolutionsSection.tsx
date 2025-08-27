@@ -68,7 +68,7 @@ const SolutionsSection: React.FC = () => {
     },
     analytics: {
       icon: BarChart3,
-      title: 'Pulse Analytics',
+      title: 'Business Intelligence',
       description: 'Real-time business intelligence and predictive analytics for data-driven decision making.',
       features: [
         'Real-time dashboards',
@@ -79,19 +79,19 @@ const SolutionsSection: React.FC = () => {
       ],
       gradient: 'from-orange-500 to-yellow-500'
     },
-    scaniq: {
-      icon: Scan,
-      title: 'ScanIQ',
-      description: 'Advanced document processing and data extraction using AI-powered optical character recognition.',
-      features: [
-        'Intelligent OCR',
-        'Document classification',
-        'Data validation',
-        'Workflow automation',
-        'API integrations'
-      ],
-      gradient: 'from-green-500 to-emerald-500'
-    }
+    // scaniq: {
+    //   icon: Scan,
+    //   title: 'ScanIQ',
+    //   description: 'Advanced document processing and data extraction using AI-powered optical character recognition.',
+    //   features: [
+    //     'Intelligent OCR',
+    //     'Document classification',
+    //     'Data validation',
+    //     'Workflow automation',
+    //     'API integrations'
+    //   ],
+    //   gradient: 'from-green-500 to-emerald-500'
+    // }
   };
 
   const tabKeys = Object.keys(solutions) as Array<keyof typeof solutions>;
@@ -198,7 +198,7 @@ const SolutionsSection: React.FC = () => {
         </div>
 
         {/* Bottom Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 mt-16">
           <div className="text-center">
             <div className="text-3xl font-bold bg-gradient-to-r from-emerald-600 to-cyan-600 bg-clip-text text-transparent">
               99.9%
@@ -211,12 +211,12 @@ const SolutionsSection: React.FC = () => {
             </div>
             <div className="text-gray-600  mt-1">Support</div>
           </div>
-          <div className="text-center">
+          {/* <div className="text-center">
             <div className="text-3xl font-bold bg-gradient-to-r from-emerald-600 to-cyan-600 bg-clip-text text-transparent">
               50ms
             </div>
             <div className="text-gray-600  mt-1">Latency</div>
-          </div>
+          </div> */}
           <div className="text-center">
             <div className="text-3xl font-bold bg-gradient-to-r from-emerald-600 to-cyan-600 bg-clip-text text-transparent">
               ISO

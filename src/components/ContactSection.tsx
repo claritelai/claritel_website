@@ -47,7 +47,8 @@ const ContactSection: React.FC = () => {
     {
       icon: MapPin,
       label: "Headquarters",
-      value: "Electronic City, Bangalore 560100",
+      value:
+        "101, Oxford Towers, 139, HAL Old Airport Rd, Kodihalli, Bengaluru, Karnataka 560008",
       href: "#",
       color: "from-purple-500 to-pink-500",
     },
@@ -198,11 +199,19 @@ const ContactSection: React.FC = () => {
                   >
                     <info.icon className="w-8 h-8 text-white" />
                   </div>
-                  <div>
+                  <div className="flex-1">
                     <h4 className="text-lg font-semibold text-gray-800 mb-2 group-hover:text-emerald-600 transition-colors duration-300">
                       {info.label}
                     </h4>
-                    <p className="text-gray-600 text-lg">{info.value}</p>
+                    <p
+                      className={`text-gray-600 ${
+                        info.label === "Headquarters"
+                          ? "text-base leading-snug"
+                          : "text-lg"
+                      }`}
+                    >
+                      {info.value}
+                    </p>
                   </div>
                 </div>
               </a>
@@ -213,13 +222,15 @@ const ContactSection: React.FC = () => {
               <h4 className="text-lg font-semibold text-gray-800 mb-4">
                 Our Headquarters
               </h4>
-              <div className="w-full h-64 bg-gradient-to-br from-emerald-100 to-cyan-100 rounded-xl flex items-center justify-center border border-gray-200">
-                <div className="text-center">
-                  <MapPin className="w-12 h-12 text-emerald-500 mx-auto mb-2" />
-                  <p className="text-sm text-gray-500 mt-1">
-                    Electronic City, Bangalore
-                  </p>
-                </div>
+              <div className="w-full h-64 rounded-xl overflow-hidden border border-gray-200">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d243.01225385152784!2d77.64670271924366!3d12.959302614901938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sOxford%20Towers%2C%20139%2C%20HAL%20Old%20Airport%20Rd%2C%20Kodihalli%2C%20Bengaluru%2C%20Karnataka%C2%A0560008!5e0!3m2!1sen!2sin!4v1756272415122!5m2!1sen!2sin"
+                  className="w-full h-full"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
               </div>
             </div>
           </div>
