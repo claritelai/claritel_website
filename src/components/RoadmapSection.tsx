@@ -14,7 +14,7 @@ const RoadmapSection: React.FC = () => {
         'Automated Quality Assurance',
         'Predictive Customer Insights'
       ],
-      status: 'In Development',
+      status: 'Development',
       color: 'from-emerald-500 to-cyan-500',
       bgColor: 'from-emerald-50 to-cyan-50'
     },
@@ -62,8 +62,8 @@ const RoadmapSection: React.FC = () => {
           {/* Roadmap Items */}
           <div className="space-y-20">
             {roadmapItems.map((item, index) => (
-              <div key={index} className={`flex items-center ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
-                <div className={`w-full max-w-lg ${index % 2 === 0 ? 'pr-8' : 'pl-8'}`}>
+              <div key={index} className={`flex items-center ${index % 2 === 0 ? 'justify-start' : 'justify-end'} md:justify-${index % 2 === 0 ? 'start' : 'end'}`}>
+                <div className={`w-full max-w-lg ${index % 2 === 0 ? 'md:pr-8' : 'md:pl-8'}`}>
                   <div className={`bg-gradient-to-br ${item.bgColor} rounded-3xl p-8 shadow-2xl border border-gray-200/50 hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-2`}>
                     {/* Header */}
                     <div className="flex items-center justify-between mb-6">

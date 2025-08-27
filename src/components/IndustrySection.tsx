@@ -1,76 +1,80 @@
-import React from 'react';
-import { 
-  Banknote, 
-  CreditCard, 
-  Shield, 
-  Heart, 
-  GraduationCap, 
-  Plane, 
-  Home, 
-  Truck, 
-  Car 
-} from 'lucide-react';
+import React from "react";
+import {
+  Banknote,
+  CreditCard,
+  Shield,
+  Heart,
+  GraduationCap,
+  Plane,
+  Home,
+  Truck,
+  Car,
+} from "lucide-react";
 
 const IndustrySection: React.FC = () => {
   const industries = [
     {
       icon: Banknote,
-      name: 'Banking',
-      description: 'Secure, compliant communication solutions for financial institutions.',
-      color: 'bg-blue-600'
+      name: "Banking",
+      description:
+        "Secure, compliant communication solutions for financial institutions.",
+      color: "bg-blue-600",
     },
     {
       icon: CreditCard,
-      name: 'Fintech',
-      description: 'Scalable payment and transaction communication platforms.',
-      color: 'bg-emerald-600'
+      name: "Fintech",
+      description: "Scalable payment and transaction communication platforms.",
+      color: "bg-emerald-600",
     },
     {
       icon: Shield,
-      name: 'Insurance',
-      description: 'Claims processing and customer service automation.',
-      color: 'bg-purple-600'
+      name: "Insurance",
+      description: "Claims processing and customer service automation.",
+      color: "bg-purple-600",
     },
     {
       icon: Heart,
-      name: 'Healthcare',
-      description: 'HIPAA-compliant patient communication and telemedicine.',
-      color: 'bg-red-600'
+      name: "Healthcare",
+      description: "HIPAA-compliant patient communication and telemedicine.",
+      color: "bg-red-600",
     },
     {
       icon: GraduationCap,
-      name: 'EdTech',
-      description: 'Educational communication and student support systems.',
-      color: 'bg-indigo-600'
+      name: "EdTech",
+      description: "Educational communication and student support systems.",
+      color: "bg-indigo-600",
     },
     {
       icon: Plane,
-      name: 'Travel',
-      description: 'Booking, support, and customer experience optimization.',
-      color: 'bg-cyan-600'
+      name: "Travel",
+      description: "Booking, support, and customer experience optimization.",
+      color: "bg-cyan-600",
     },
     {
       icon: Home,
-      name: 'Real Estate',
-      description: 'Lead management and property inquiry handling.',
-      color: 'bg-orange-600'
+      name: "Real Estate",
+      description: "Lead management and property inquiry handling.",
+      color: "bg-orange-600",
     },
     {
       icon: Truck,
-      name: 'Logistics',
-      description: 'Supply chain communication and tracking systems.',
-      color: 'bg-green-600'
+      name: "Logistics",
+      description: "Supply chain communication and tracking systems.",
+      color: "bg-green-600",
     },
     {
       icon: Car,
-      name: 'Automobile',
-      description: 'Dealer networks and customer service automation.',
-      color: 'bg-gray-600'
-    }
+      name: "Automobile",
+      description: "Dealer networks and customer service automation.",
+      color: "bg-gray-600",
+    },
   ];
 
   return (
-    <section id="industries" className="py-24 bg-black relative overflow-hidden">
+    <section
+      id="industries"
+      className="py-24 bg-black relative overflow-hidden"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-20">
@@ -78,20 +82,22 @@ const IndustrySection: React.FC = () => {
             Industry Solutions
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            Tailored AI-powered communication solutions designed for the unique needs 
-            and compliance requirements of every industry vertical.
+            Tailored AI-powered communication solutions designed for the unique
+            needs and compliance requirements of every industry vertical.
           </p>
         </div>
 
         {/* Industry Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="flex md:grid overflow-x-auto md:overflow-x-visible gap-8 pb-4 md:pb-0 -mx-4 px-4 md:mx-0 md:px-0 snap-x snap-mandatory md:grid-cols-2 lg:grid-cols-3 hide-scrollbar">
           {industries.map((industry, index) => (
             <div
               key={index}
-              className="group relative bg-gray-900 rounded-3xl p-8 border border-gray-800 hover:shadow-2xl hover:shadow-emerald-500/20 transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 cursor-pointer"
+              className="group relative bg-gray-900 rounded-3xl p-8 border border-gray-800 hover:shadow-2xl hover:shadow-emerald-500/20 transition-all duration-500 transform hover:-translate-y-2 hover:scale-105 cursor-pointer flex-shrink-0 w-[85vw] sm:w-[60vw] md:w-auto snap-center"
             >
               {/* Icon */}
-              <div className={`relative w-16 h-16 ${industry.color} rounded-2xl flex items-center justify-center mb-6 transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg`}>
+              <div
+                className={`relative w-16 h-16 ${industry.color} rounded-2xl flex items-center justify-center mb-6 transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg`}
+              >
                 <industry.icon className="w-8 h-8 text-white" />
               </div>
 
@@ -106,8 +112,18 @@ const IndustrySection: React.FC = () => {
               {/* Learn More Link */}
               <div className="flex items-center text-emerald-400 font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <span>Learn More</span>
-                <svg className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                <svg
+                  className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-300"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M9 5l7 7-7 7"
+                  />
                 </svg>
               </div>
             </div>

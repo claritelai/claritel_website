@@ -64,11 +64,15 @@ const Footer: React.FC = () => {
     <footer className="bg-white border-t border-blue-200">
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid lg:grid-cols-6 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-6 gap-12">
           {/* Brand Section */}
           <div className="lg:col-span-3">
             <div className="mb-6">
-              <img src={darkLogo} alt="Claritel.ai" className="text-xl" />
+              <img
+                src={darkLogo}
+                alt="Claritel.ai"
+                className="w-32 sm:w-40 h-auto"
+              />
               <p className="text-gray-600 mt-4 leading-relaxed">
                 Transforming customer experience with AI-powered, carrier-grade
                 communication solutions that scale with your business.
@@ -120,25 +124,27 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Footer Links */}
-          {Object.entries(footerLinks).map(([category, links], index) => (
-            <div key={index}>
-              <h3 className="text-lg font-semibold text-gray-800 mb-4">
-                {category}
-              </h3>
-              <ul className="space-y-3">
-                {links.map((link, linkIndex) => (
-                  <li key={linkIndex}>
-                    <a
-                      href={link === "Careers" ? "#contact" : "#"}
-                      className="text-gray-600 hover:text-blue-600 transition-colors duration-300"
-                    >
-                      {link}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          <div className="lg:col-span-3 grid grid-cols-2 lg:grid-cols-3 gap-12">
+            {Object.entries(footerLinks).map(([category, links], index) => (
+              <div key={index}>
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">
+                  {category}
+                </h3>
+                <ul className="space-y-3">
+                  {links.map((link, linkIndex) => (
+                    <li key={linkIndex}>
+                      <a
+                        href={link === "Careers" ? "#contact" : "#"}
+                        className="text-gray-600 hover:text-blue-600 transition-colors duration-300"
+                      >
+                        {link}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
